@@ -1,23 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h> 
 
-void convertToUppercase(char *sPtr);
+void printCharacters(const char *sPtr);
 
 int main(void) {
-	char string[] = "hOmeWorK 0523-0531";
-	
-	printf("The string before conversion is: %s\n",string);
-	convertToUppercase(string);
-	printf("The string after conversion is: %s\n",string);
-	//return 0;
+	char string[] = "print characters of a string";
+
+	puts("The string is:");
+	printCharacters(string);
+	puts("");
 }
 
-void convertToUppercase(char *sPtr) {
-	while (*sPtr != '\0') {
-		*sPtr = toupper(*sPtr);
-		++sPtr;
+void printCharacters(const char *sPtr) {
+	for( ; *sPtr != '\0' ; ++sPtr) {
+		printf("%c", *sPtr);
 	}
 }
-
 
